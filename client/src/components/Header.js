@@ -2,10 +2,7 @@ function Header() {
     return (
       <header>
         <h1>
-          Blogyfy
-          <span className="logo" role="img">
-            🌱
-          </span>
+          Blogy & Expressify
         </h1>
       </header>
     );
