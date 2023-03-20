@@ -1,6 +1,8 @@
+
+import React from "react";
 import BlogCard from "./BlogCard";
 
-function BlogList({ blogs, onDeleteBlog, onEditBlog }) {
+function BlogList({ blogs, onDeleteBlog, onUpdateBlog }) {
   return (
     <ul className="cards">
       {blogs.map((blog) => {
@@ -9,7 +11,7 @@ function BlogList({ blogs, onDeleteBlog, onEditBlog }) {
             key={blog.id}
             blog={blog}
             onDeleteBlog={onDeleteBlog}
-            onEditBlog={onEditBlog}
+            onUpdateBlog={onUpdateBlog}
           />
         );
       })}

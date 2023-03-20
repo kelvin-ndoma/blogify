@@ -6,7 +6,6 @@ function NewBlogForm({ onAddBlog }) {
   const [image, setImage] = useState("");
   const [description, setDescription] = useState("");
   const [author, setAuthor] = useState("");
-  
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -24,6 +23,11 @@ function NewBlogForm({ onAddBlog }) {
     })
       .then((res) => res.json())
       .then((newBlog) => onAddBlog(newBlog));
+
+    setTitle("");
+    setImage("");
+    setDescription("");
+    setAuthor("");
   }
 
   return (

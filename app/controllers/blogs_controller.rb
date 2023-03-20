@@ -21,11 +21,11 @@ class BlogsController < ApplicationController
   def update
     blog = Blog.find_by(id: params[:id])
     if blog
-       blog.update(blog_params)
-        render json: blog, status: :accepted
-      else
-        render json: { errors: "blog not found" }, status: :not_found
-      end
+      blog.update(blog_params)
+      render json: blog, status: :accepted
+    else
+      render json: { errors: "Blog not found" }, status: :not_found
+    end
   end
 
   # DELETE /blogs/:id
