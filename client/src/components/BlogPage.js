@@ -28,7 +28,7 @@ function BlogPage() {
       if (res.ok) {
         const updatedBlogsArray = blogs.filter((blog) => blog.id !== id);
         setBlogs(updatedBlogsArray);
-        window.location.reload(); // reload the page after the blog is deleted
+        window.location.reload(); 
       }
     });
   }
@@ -48,7 +48,7 @@ function BlogPage() {
           blog.id === updatedBlog.id ? updatedBlog : blog
         );
         setBlogs(updatedBlogsArray);
-        setEditingBlogId(null); // clear the editing state after submitting the form
+        setEditingBlogId(null); 
       });
   }
 
@@ -60,12 +60,16 @@ function BlogPage() {
 
   return (
     <main>
+     
+     
+      <Search searchTerm={searchTerm} onSearchChange={setSearchTerm} />
+     
       <h1 style={{ fontSize: "1.5rem", marginBottom: "1rem" }}>Add a Blog</h1>
       <NewBlogForm onAddBlog={handleAddBlog} />
-      <Search searchTerm={searchTerm} onSearchChange={setSearchTerm} />
-      <h1 style={{ fontSize: "1.5rem", marginTop: "2rem", marginBottom: "1rem" }}>
+        <h1 style={{ fontSize: "1.5rem", marginTop: "2rem", marginBottom: "1rem", textAlign: "center" }}>
         Blogs Session
-      </h1>
+        </h1>
+
       <BlogList
         blogs={displayedBlogs}
         onDeleteBlog={handleDeleteBlog}
@@ -84,7 +88,9 @@ function BlogPage() {
         >
           <h2 style={{ fontSize: "1.2rem", marginBottom: "1rem" }}>Edit Blog Post</h2>
           <NewBlogForm initialBlog={editingBlog} onAddBlog={handleUpdateBlog} />
+         
         </div>
+         
       )}
     </main>
   );

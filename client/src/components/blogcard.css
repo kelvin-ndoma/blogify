@@ -1,0 +1,29 @@
+.card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  .card h4 {
+    margin-top: 0;
+  }
+  
+  .card p {
+    margin: 0;
+  }
+  
+  .card img {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+  
+  .card button {
+    margin-right: 10px;
+  }
+  
+  .card .primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+  }
+  

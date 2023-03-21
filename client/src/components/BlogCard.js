@@ -1,4 +1,4 @@
-
+import './blogcard.css'
 import React, { useState } from "react";
 
 function BlogCard({ blog, onDeleteBlog, onUpdateBlog }) {
